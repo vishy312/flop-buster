@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>FlopBuster</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    html{
+      text-align: center;
+    }
+    .movies {
+      margin-top: 5em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .movie > img{
+      width: 300px;
+      height: 400px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Best Flop Movies</h1>
+  <div class="movies">
+    <div class="movie">
+      <img src="https://rukminim1.flixcart.com/image/416/416/poster/m/z/y/tamasha-officially-licensed-pbutv266tama16p24-medium-original-imaejvgzvvk5w5zj.jpeg?q=70" alt="">
+      <br>
+      <h3 [hidden]="!isSelected(0)">Chosen!</h3>
+      <button [disabled]="anySelected() && !isSelected(0)" (click)="onVoteClick(0)">{{getButtonText(0)}}</button>
+    </div>
+    <div class="movie">
+      <img src="https://1.bp.blogspot.com/-Ya1kyBG8D94/WFfZM75yW2I/AAAAAAAAyak/7kwFFOcA2HgBHgzzh_m3pKiYpa1TQg-5QCLcB/s1600/jagga-jasoos.jpg" alt="">
+      <br>
+      <h3 [hidden]="!isSelected(1)">Chosen!</h3>
+      <button [disabled]="anySelected() && !isSelected(1)" (click)="onVoteClick(1)">{{getButtonText(1)}}</button>
+    </div>
+    <div class="movie">
+      <img src="https://m.media-amazon.com/images/M/MV5BMDFkMjlhM2ItZGVjYy00YzAyLWFmMjEtNDM5OGNmODFmMzhkXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg" alt="">
+      <br>
+      <h3 [hidden]="!isSelected(2)">Chosen!</h3>
+      <button [disabled]="anySelected() && !isSelected(2)" (click)="onVoteClick(2)">{{getButtonText(2)}}</button>
+    </div>
+    <div class="movie">
+      <img src="https://images.inuth.com/2017/10/1Varun-Dhawan-and-Banita-Sandhu-look-ethereal-in-this-October-poster.jpg" alt="">
+      <br>
+      <h3 [hidden]="!isSelected(3)">Chosen!</h3>
+      <button [disabled]="anySelected() && !isSelected(3)" (click)="onVoteClick(3)">{{getButtonText(3)}}</button>
+    </div>
+  </div>
+</body>
+
+</html>
